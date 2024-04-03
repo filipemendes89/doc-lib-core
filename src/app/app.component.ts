@@ -11,6 +11,7 @@ import { ProAppConfigService, ProJsToAdvplService } from '@totvs/protheus-lib-co
 export class AppComponent {
 
   readonly menus: Array<PoMenuItem> = [
+    { label: 'Registros', link: 'convergencia' },
     { label: 'mensagemJS', action: this.click1.bind(this) },
     { label: 'ReceberProtheus', action: this.click2.bind(this) },
     { label: 'Fechar direto', action: this.click3.bind(this) },

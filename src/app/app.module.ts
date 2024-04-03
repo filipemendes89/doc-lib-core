@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { ProtheusLibCoreModule } from '@totvs/protheus-lib-core';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { ProtheusLibCoreModule } from '@totvs/protheus-lib-core'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PoModule } from '@po-ui/ng-components';
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router'
+import { PoModule } from '@po-ui/ng-components'
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { ConvergenciaComponent } from './convergencia/convergencia.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConvergenciaComponent
   ],
   imports: [
     BrowserModule,
