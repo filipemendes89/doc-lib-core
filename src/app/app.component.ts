@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { ProAppConfigService, ProJsToAdvplService } from '@totvs/protheus-lib-core';
+import { Component } from '@angular/core'
+
+import { PoMenuItem } from '@po-ui/ng-components'
+import { ProAppConfigService, ProJsToAdvplService } from '@totvs/protheus-lib-core'
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,13 @@ import { ProAppConfigService, ProJsToAdvplService } from '@totvs/protheus-lib-co
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  readonly menus: Array<PoMenuItem> = [
+    { label: 'mensagemJS', action: this.click1.bind(this) },
+    { label: 'ReceberProtheus', action: this.click2.bind(this) },
+    { label: 'Fechar direto', action: this.click3.bind(this) },
+    { label: 'Fechar Perguntando', action: this.click4.bind(this) }
+  ];
   title = 'doc-lib-core';
 
   constructor(
@@ -29,4 +38,5 @@ export class AppComponent {
   click4(): void {
     this.proAppConfigService.callAppClose(false);
   }
+
 }
